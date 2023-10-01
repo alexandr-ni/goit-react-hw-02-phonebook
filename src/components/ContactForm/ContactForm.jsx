@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import {
+  BtnWrapper,
   ErrorMsg,
   FormBtn,
   FormField,
@@ -34,7 +35,9 @@ export const ContactForm = ({ onAdd }) => {
             <FormField name="number" type="tel" required />
             <ErrorMsg name="number" component="div" />
           </Label>
-          <FormBtn type="submit">Add contact</FormBtn>
+          <BtnWrapper>
+            <FormBtn type="submit">Add contact</FormBtn>
+          </BtnWrapper>
         </StyledForm>
       </Formik>
     </div>

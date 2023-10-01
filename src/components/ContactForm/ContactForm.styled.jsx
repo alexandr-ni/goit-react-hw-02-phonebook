@@ -8,10 +8,6 @@ export const StyledForm = styled(Form)`
   flex-direction: column;
   gap: 8px;
   border: solid 2px black;
-
-  :active {
-    background-color: #539f53;
-  }
 `;
 
 export const Label = styled.label`
@@ -27,6 +23,12 @@ export const FormField = styled(Field)`
 export const ErrorMsg = styled(ErrorMessage)`
   font-size: 14px;
   color: red;
+`;
+
+export const BtnWrapper = styled.div`
+  :active {
+    background-color: #539f53;
+  }
 `;
 
 export const FormBtn = styled.button`
