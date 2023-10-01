@@ -1,6 +1,8 @@
+import { FilterInput } from './Filter.styled';
+
 export const Filter = ({ filterData, onChangeFilter }) => {
   return (
-    <input
+    <FilterInput
       type="text"
       value={filterData}
       onChange={evt => {

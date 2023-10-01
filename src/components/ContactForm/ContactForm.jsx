@@ -25,6 +25,7 @@ export const ContactForm = ({ onAdd }) => {
       >
         <StyledForm>
           <Label>
+            Name
             <FormField name="name" type="text" required />
             <ErrorMsg name="name" component="div" />
           </Label>
