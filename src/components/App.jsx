@@ -17,12 +17,16 @@ export class App extends Component {
   };
 
   addContact = newContact => {
-    for (const client of this.state.contacts) {
-      if (client.name === newContact.name) {
-        alert(`${newContact.name} is already in contacts.`);
-        break;
+    function checkContact(contacts, newcontact) {
+      for (const contact of contacts) {
+        if (contact.name.toLowerCase() === newcontact.name.toLowerCase()) {
+          alert(`${newcontact.name} is already in contacts.`);
+          return true;
+        }
       }
+    }
 
+    if (checkContact(this.state.contacts, newContact) === undefined) {
       this.setState(prevState => ({
         contacts: [
           ...prevState.contacts,
@@ -32,8 +36,8 @@ export class App extends Component {
           },
         ],
       }));
-      break;
     }
+    return;
   };
 
   changeFilter = newFilter => {
